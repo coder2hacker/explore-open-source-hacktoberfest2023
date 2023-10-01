@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style type="text/css">
+        @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+        body{
+            background: url("./image-1.jpg") no-repeat;
+            background-size: cover;
+        }
+        .sign-up-box{
+        
+        }
+        .sign-up{
+            display: flex;
+            flex-direction: column;
+
+            /* border: 0.1px solid white; */
+            margin: 15% 45%;
+            width: 245px;
+            height: 185px;
+        }
+        h1{
+            font-size: 40px;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sign-up-box{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        .box{
+            display: flex;
+            gap: 5px;
+
+        }
+        .box input{
+            font-style: 18px;
+            height: 30px;
+        }
+        .fas{
+            color: white;
+            padding-top: 10px;
+        }
+        .btn{
+            margin: 20px;
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: rgb(222, 221, 221);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="sign-up-box">
+        <div class="sign-up">
+            <h1>Sign Up</h1>
+            <div class="sign-up-box">
+            <div class="box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" required autocomplete="name">
+              </div>
+            
+              <div class="box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" required>
+              </div>
+             </div>
+             <button class="btn" type="submit">
+                Submit
+             </button>
+        </div>
+    </div>
+</body>
+</html>

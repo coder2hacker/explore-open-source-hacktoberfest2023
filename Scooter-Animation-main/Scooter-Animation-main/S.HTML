@@ -1,0 +1,557 @@
+<!-- created by : Siraj Molla -->
+
+<!--- edits ---
+1. decreased height of grass
+-------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scooter Animation</title>
+ <script type="text/javascript">
+/*  created by : SwapniL */
+document.addEventListener('DOMContentLoaded',()=>{const base=document.querySelector('#base');base.style.visibility="hidden";});window.onload=()=>{showLoader();} 
+function showLoader(){const bodyTag=document.querySelector('body');const loaderTag=document.createElement('img');loaderTag.setAttribute('id','loader');loaderTag.src='https://icons8.com/preloaders/preloaders/285/Moving%20blocks.gif';loaderTag.style.height=0x64+'px';loaderTag.style.width=0x64+'px';loaderTag.style.position='absolute';loaderTag.style.top='calc(50% - '+0x32+'px)';loaderTag.style.left='calc(50% - '+0x32+'px)';bodyTag.appendChild(loaderTag);setTimeout(displayContent,0x3E8);}function displayContent(){const loader=document.getElementById('loader');loader.style.visibility="hidden";showIntroCard();}function showIntroCard(){const bodyTag=document.querySelector('body');bodyTag.style.margin=0x0;bodyTag.style.padding=0x0;bodyTag.style.boxSizing='border-box';const surface=document.createElement('div');surface.setAttribute('id','surface-id');surface.style.fontFamily='monospace';surface.style.position='absolute';surface.style.top=0x0;surface.style.zIndex=0x2710;surface.style.backgroundColor='rgb(0, 0, 0, 0.75)';surface.style.height=0x64+'vh';surface.style.width=0x64+'vw';bodyTag.appendChild(surface);const card=document.createElement('div');card.style.position='absolute';card.style.backgroundColor='black';card.style.color='white';card.style.zIndex=0x2710;card.style.height=0x12c+'px';card.style.width=0xdc+'px';card.style.borderRadius=0xa+'px';card.style.padding=0xa+'px';card.style.top='calc(50% - '+0x96+'px)';card.style.left='calc(50% - '+0x69+'px)';card.animate([{transform:'scale(1)'},{transform:'scale(0.9)'},{transform:'scale(1.1)'},{transform:'scale(0.9)'},{transform:'scale(1)'}],{duration:0x190,iterations:0x1,easing:'linear'});surface.appendChild(card);const imgHead=document.createElement('h3');imgHead.style.textAlign='center';const imgTag=document.createElement('img');imgTag.style.height=0x50+'px';imgTag.style.width=0x6e+'px';imgTag.src='https://i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif';imgHead.appendChild(imgTag);card.appendChild(imgHead);const headTagText=document.createTextNode('Created by:SIRAJ TECH SOLUTION');const headTextTag=document.createElement('h3');headTextTag.style.textAlign='center';headTextTag.style.fontSize=0x10+'px';headTextTag.appendChild(headTagText);card.appendChild(headTextTag);const headTag2Text=document.createTextNode('Wanna Play Music??');const headTag2=document.createElement('h1');headTag2.style.textAlign='center';headTag2.style.marginTop=0xe+'px';headTag2.style.fontSize=0xe+'px';headTag2.appendChild(headTag2Text);card.appendChild(headTag2);const para3=document.createElement('h3');para3.style.textAlign='center';card.appendChild(para3);const button=document.createElement('button');button.innerText='sure';button.style.outline='none';button.style.color='white';button.style.border='1px solid white';button.style.backgroundColor='transparent';button.style.padding='0.5em 2em';button.style.marginTop=0xe+'px';button.style.borderRadius=0x5+'px';para3.appendChild(button);button.setAttribute('onclick','hideIntroCard(true)');const button2=document.createElement('button');button2.innerText='nope';button2.style.outline='none';button2.style.color='white';button2.style.border='1px solid white';button2.style.backgroundColor='transparent';button2.style.padding='0.5em 2em';button2.style.marginTop=0xe+'px';button2.style.borderRadius=0x5+'px';para3.appendChild(button2);button2.setAttribute('onclick','hideIntroCard(false)');const music=document.createElement('audio');music.setAttribute('src','https://lab-swapnil.github.io/intro/hawaa.mp3');music.setAttribute('loop','true');music.setAttribute('id','music');bodyTag.appendChild(music);}function hideIntroCard(e){if(e){play();}document.body.removeChild(document.getElementById('surface-id'));const base=document.getElementById('base');base.style.visibility="visible";}function play(){document.getElementById('music').play();}
+/*  created by : Siraj Molla */
+ </script>
+  <script> document.addEventListener('DOMContentLoaded', ()=>{const base = document.querySelector('#base');base.style.visibility = "hidden";})
+  </script>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(184, 235, 255);
+      overflow: hidden;
+    }
+    #base{
+      height: 250px;
+      width: 200px;
+      position: relative;
+      left:-5%;
+      transform: scale(1.5);
+    }
+    .tires{
+      display: block;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-image: radial-gradient(gray, black);
+      position: absolute;
+      transform: scale(0.7);
+      z-index: 2;
+    }
+    .tire-one{
+      top: calc(100% - 50px);
+      left: calc(20% - 15px);
+      z-index: 2;
+    }
+    .tire-two{
+      top: calc(100% - 50px);
+      left: 70%;
+      z-index: 2;
+    }
+    .tire-one::after{
+      content: "";
+      display: block;
+      height: 25px;
+      width: 54px;
+      position: relative;
+      left: 4px;
+      border-radius: 90px 90px 0 0;
+      background-color: red;
+      transform: rotate(25deg);
+      box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.3);
+    }
+    .tire-two::after{
+      content: "";
+      display: block;
+      height: 35px;
+      width: 60px;
+      border-radius: 90px 90px 0 0;
+      background-color: red;
+      position: relative;
+      left: -5px;
+      top: -8px;
+      box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.3);
+    }
+    .front-handle{
+      display: block;
+      position: absolute;
+      top: calc(100% - 96px);
+      left: 65px;
+      z-index: 2;
+    }
+    .front-handle::after{
+      content: "";
+      display: block;
+      height: 50px;
+      width: 5px;
+      position: relative;
+      top: calc(100% - 0px);
+      transform: rotate(25deg);
+      z-index: 1;
+      background-color: red
+    }
+    .front-handle::before{
+      content: "";
+      display: block;
+      height: 8px;
+      width: 35px;
+      transform: rotate(45deg);
+      position: relative;
+      top: 50px;
+      left: -8px;
+      background-color: red
+    }
+    .base{
+      display: block;
+      height: 10px;
+      width: 100px;
+      background-color: red;
+      position: absolute;
+      top: calc(100% - 35px);
+      left: 25%;
+      z-index: 2;
+    }
+    .seat{
+      display: block;
+      height: 40px;
+      width: 50px;
+      background-color: red;
+      position: absolute;
+      top: calc(100% - 65px);
+      left: 120px;
+      z-index: 1;
+    }
+    .seat::before{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: rgb(184, 235, 255);
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      position: relative;
+      top: 5px;
+      left: 0px;
+    }
+    .seat::after{
+      content: "";
+      display: block;
+      height: 5px;
+      width: 50px;
+      background-color: gray;
+      position: absolute;
+      top: -5px;
+      border-radius: 5px;
+    }
+    .headlight{
+      display: block;
+      position: absolute;
+      height: 15px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: red;
+      top: calc(100% - 95px);
+      left: 66px;
+      z-index: 2;
+    }
+    .headlight::after{
+      content: "";
+      display: block;
+      height: 12px;
+      width: 5px;
+      border-radius: 50%;
+      position: relative;
+      top: 1px;
+      background-color: teal;
+    }
+    .handle-main{
+      display: block;
+      height: 8px;
+      width: 8px;
+      background-color: gray;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(100% - 92px);
+      left: 75px;
+      z-index: 3;
+    }
+    .shoes{
+      display: block;
+      height: 5px;
+      width: 20px;
+      background-color: white;
+      position: absolute;
+      top: calc(100% - 32px);
+      left: 88px;
+      z-index: 5;
+      border-radius: 30px 10px 0px 0px;
+      box-shadow: 0px 1px 1px black;
+      border-top: 1px solid gray;
+    }
+    .front-leg{
+      display: block;
+      position: absolute;
+      top: calc(100% - 80px);
+      left: 92px;
+      z-index: 4;
+    }
+    .front-leg::after{
+      content: "";
+      display: block;
+      height: 50px;
+      width: 10px;
+      background-color: orangered;
+      top: calc(100% - 80px);
+      transform: rotate(-10deg);
+      border-radius: 5px 5px 0 0 ;
+    }
+    .thigh{
+      display: block;
+      height: 12px;
+      width: 50px;
+      background-color: orangered;
+      position: absolute;
+      top: calc(100% - 80px);
+      left: 90px;
+      z-index: 4;
+      border-radius: 5px 0 5px 0;
+    }
+    .chest{
+      display: block;
+      position: absolute;
+      top: calc(100% - 98px);
+      left: 124px;
+      z-index: 1;
+    }
+    .chest::before{
+      content: "";
+      display: block;
+      height: 20px;
+      width: 15px;
+      background-color: teal;
+      top: calc(100% - 98px);
+      left: 124px;
+      z-index: 1;
+      transform: rotate(-5deg);
+    }
+    .chest::after{
+      content: "";
+      display: block;
+      height: 20px;
+      width: 15px;
+      background-color: teal;
+      position: absolute;
+      top: -19px;
+      left: -2px;
+      border-radius: 10px 10px 0 0;
+      transform: rotate(-5deg);
+    }
+    .hand{
+      display: block;
+      position : absolute;
+      top: calc(100% - 90px);
+      left: 82px;
+      z-index: 2;
+    }
+    .hand::before{
+      content: "";
+      display: block;
+      height: 6px;
+      width: 20px;
+      position : relative;
+      top: -2px;
+      left: -1px;      
+      background-color: rgb(255, 151, 161);
+      transform: rotate(-8deg);
+    }
+    .hand::after{
+      content: "";
+      display: block;
+      height: 8px;
+      width: 35px;
+      background-color: rgb(2, 171, 171);
+      position: relative;
+      top: -19px;
+      left: 15px;
+      transform: rotate(-30deg);
+      border-radius: 0 10px 10px 0;
+    }
+    span{
+      animation: motion 10ms linear infinite alternate;
+    }
+    .neck{
+      display: block;
+      height: 5px;
+      width: 5px;
+      background-color: rgb(215, 151, 161);
+      position: absolute;
+      top: calc(100% - 120px);
+      left: 125px;
+      z-index: 2;
+      transform: rotate(-10deg);
+    }
+    .face{
+      display: block;
+      height: 20px;
+      width: 20px;
+      border-radius: 50% 50% 50% 45%;
+      background-color: rgb(255, 151, 161);
+      position: absolute;
+      top: calc(100% - 138px);
+      left: 115px;
+      z-index: 2;
+    }
+    .helmet{
+      display: block;
+      height: 11px;
+      width: 22px;
+      border-radius: 20px 20px 0 0;
+      transform: rotate(10deg);
+      background-color: orangered;
+      position: absolute;
+      top: calc(100% - 140px);
+      left: 114px;
+      z-index: 2;
+    }
+    .helmet::after{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 10px;
+      background-color: orangered;
+      border-radius: 0 0 4px 4px;
+      position: relative;
+      top: 8px;
+      left: 12px;
+    }
+    .mouth{
+      display: block;
+      height: 2px;
+      width: 3px;
+      background-color: red;
+      position: absolute;
+      top: calc(100% - 123px);
+      left: 117px;
+      border-radius: 5px;
+      z-index: 2;
+    }
+    .eyes{
+      display: block;
+      height: 2px;
+      width: 2px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(100% - 129px);
+      left: 117px;
+      z-index: 2;
+    }
+    .container{
+      display: block;
+      height: 30px;
+      width: 30px;
+      background-color: peru;
+      position: absolute;
+      top: calc(100% - 100px);
+      left: 142px;
+      z-index: 2;
+    }
+    .container::after{
+      content: "❤";
+      position: relative;
+      left: calc(50% - 8px);
+      top: 5px;
+    }
+    .dust{
+      display: block;
+      height: 5px;
+      width: 20px;
+      background-color: gray;
+      position: absolute;
+      top: calc(100% - 5px);
+      border-radius: 100%;
+      z-index: 10;
+      animation: speed 100ms linear infinite;
+    }
+    .front{
+      left: 50px;
+    }
+    .back{
+      left: 170px;
+    }
+    .clouds{
+        display: block;
+        height: 25px;
+        width: 100px;
+        position: absolute;
+        background-color: white;
+        top: 50px;
+        left: -40vw;
+        border-radius: 50px;
+        animation: float 10s linear forwards infinite;
+        z-index: 0;
+    }
+    .clouds::after{
+        content: "";
+        display: block;
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        position: relative;
+        top: -65px;
+        left: 12px;
+        border-radius: 50px;
+    }
+    .second{
+      z-index: 0;
+      top: 30px !important;
+      left: -60vw !important;
+      animation: float 10s 2s linear forwards infinite;
+    }
+    .clouds::before{
+        content: "";
+        display: block;
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        position: relative;
+        top: -25px;
+        left: 33px;
+        border-radius: 50px;
+    }
+    .road{
+      display: block;
+      height: 20px;
+      width: 100vw;
+      background-color: rgb(194, 194, 194);
+      position: absolute;
+      bottom: -10px;
+      left: -30vw;
+      z-index: 1;
+    }
+    .grass{
+      display: block;
+      height: 100px;
+      width: 100vw;
+      background-color: lightgreen;
+      position: absolute;
+      bottom: -110px;
+      left: -30vw;
+      z-index: 0;
+    }
+    img.tree{
+      position: absolute;
+      height: 200px;
+      bottom: -10px;
+      left: -50vw;
+      animation: float 5s linear infinite;
+    }
+    img.birds{
+      position: absolute;
+      height: 50px;
+      z-index: 0;
+      left: -30vw;
+      animation: float 15s linear infinite;
+    }
+    @keyframes motion {
+      from{
+        transform: translateY(0px);
+      }
+      to{
+        transform: translateY(-1px);
+      }
+    }
+    @keyframes speed {
+      0%{
+        transform: translateX(0px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateX(20px);
+        opacity: 1;
+      }
+    }
+    @keyframes float {
+      0%{
+          transform: translateX(0px);
+      }
+      100%{
+          transform: translateX(100vw);
+      }
+    }
+/* CSS rules for youtube link (starts) */
+
+    .yt{
+        height : 60px;
+        width : 100%;
+        position: absolute;
+        top: calc(100% - 60px);
+     }
+     .yt > a{
+        height : 40px;
+        width : 200px;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        background-color:lightgreen;
+        text-decoration : none;
+        color : black;
+        border-radius: 5px;
+        position: relative;
+        top: calc(50% - 20px);
+        left: calc(50% - 100px);
+        border:1px solid green;
+      }
+/* CSS rules for youtube link (ends) */
+  </style>
+</head>
+<body>
+  <div id="base">
+    <span class="tires tire-one"></span>
+    <span class="tires tire-two"></span>
+    <span class="front-handle"></span>
+    <span class="base"></span>
+    <span class="seat"></span>
+    <span class="headlight"></span>
+    <span class="handle-main"></span>
+    <span class="shoes"></span>
+    <span class="front-leg"></span>
+    <span class="thigh"></span>
+    <span class="chest"></span>
+    <span class="hand"></span>
+    <span class="neck"></span>
+    <span class="face"></span>
+    <span class="mouth"></span>
+    <span class="eyes"></span>
+    <span class="helmet"></span>
+    <span class="container"></span>
+    <span class="dust front"></span>
+    <span class="dust back"></span>
+    <span class="clouds first"></span>
+    <span class="clouds second"></span>
+    <div class="road"></div>
+    <span class="grass"></span>
+    <img class="tree" src="https://i.pinimg.com/originals/d6/7b/ec/d67becae2da0f810f63ec8309a5f3f3f.gif" alt="">
+    <img class="birds" src="https://gifimage.net/wp-content/uploads/2020/03/bird-flying-transparent-gif-2.gif" alt="">
+  </div>
+<!-- markup for youtube link (starts) -->
+  <div class="yt">
+      <a href="https://www.youtube.com/Sirajtechsolution"
+       target="_blank">My Youtube Channel</a>
+  </div>
+<!-- markup for youtube link (ends) -->
+</body>
+</html>
