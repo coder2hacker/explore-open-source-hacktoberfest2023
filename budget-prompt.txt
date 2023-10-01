@@ -1,0 +1,4 @@
+Write a short summary for the client regarding the current mobile app project status:
+- Working on the last key features
+- Project is 10% above budget
+- Planned to finish in Q3
