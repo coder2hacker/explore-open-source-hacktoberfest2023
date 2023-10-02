@@ -1,0 +1,73 @@
+Create Game_Engine(.dll) Change Configuration Type  
+	set output directory[ $(SolutionDir)bin\$(Configuration)-$(Platform)/ ]
+	set intermediate directory[ $(SolutionDir)bin-int\$(Configuration)-$(Platform)/ ]
+create Game(.exe)
+	set output directory[ $(SolutionDir)bin\$(Configuration)-$(Platform)/ ]
+	set intermediate directory[ $(SolutionDir)bin-int\$(Configuration)-$(Platform)/ ]
+
+Game(Add reference [select Game_Engine])
+
+Game 
+ src
+  Application.cpp
+
+Game_Engine
+ src
+  Test.cpp
+  Test.h
+
+
+Application.cpp //____________//
+namespace Game_Engine {
+	__declspec(dllimport) void Print();
+} 
+void main() {
+	Game_Engine::Print();
+}
+//----------------------------------//
+
+Test.cpp //___________//
+#include "Test.h"
+#include <stdio.h>
+namespace Game_Engine {
+	void Print() 
+	{
+		printf("Welcome to Game Engine!\n");
+	}
+}
+//----------------------------------//
+
+Test.h //___________//
+#pragma once
+
+namespace Game_Engine {
+	__declspec(dllexport) void Print();
+}
+//----------------------------------//
+
+
+//More details
+
+-Entry Point 
+-Application layer
+-window layer
+	-input
+	-events
+-Renderer
+-Render Api abstraction (Open Gl)
+-Debugging Support
+-Scrypting Language
+-Entity component System
+-Physics
+-File I/O
+-Build System
+
+//---------------------------------------------------------------//
+
+//Extras
+
+Static library (.a)
+Dynamic library (.dll)
+Executable File (.exe)
+
+
