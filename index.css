@@ -1,0 +1,36 @@
+ul li{
+    /* text-decoration: none; */
+    list-style-type:square;
+}
+h5{
+    font-size: 0.89rem !important;
+}
+p{
+    font-size: 1.3rem;
+}
+.img{
+    height: 259px !important;
+}
+body{
+    /* content: "";
+    position: absolute; */
+    background:url('./bg.jpeg') no-repeat center center fixed;
+    height: 1120px;
+    width:100%;
+    /* z-index: -1;
+    opacity:0.8; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#hindi1,#marathi1,#english1{
+
+    color: #eec793 !important;
+
+}
+.history{
+    color: #f4dc95;
+    font-weight: bolder;
+    text-shadow: 2px 1px 3px black;
+}
