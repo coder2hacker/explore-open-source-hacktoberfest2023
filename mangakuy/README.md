@@ -1,7 +1,7 @@
 # mangakuy
 
 MangaKuy!!
-Aplikasi Baca Manga build with Flutter + Firebase!
+Manga Reader App Build With Flutter + Firebase!
 
 Use this [API](https://github.com/amrulizwan/manga-api)
 
